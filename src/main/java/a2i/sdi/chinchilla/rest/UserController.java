@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import javax.servlet.http.HttpServletRequest;
@@ -27,6 +28,9 @@ public class UserController {
         model.addAttribute("users", users);
         return "user-list";
     }
+
+//    @PostMapping("")
+//    public
 
     @GetMapping("/session")
     public String test(Model model, HttpServletRequest request) {

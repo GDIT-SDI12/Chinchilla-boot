@@ -26,6 +26,14 @@ public class UserDaoImpl implements UserDao {
     }
 
     @Override
+    public User find(User user) {
+        Query query = entityManager.createQuery("select u from User u where u.username = :username and u.password = :password");
+        query.setParameter("username", user.getUsername());
+        query.setParameter("password", user.getPassword());
+        return (User) query.getResultStream().findFirst().orElse(null);
+    }
+
+    @Override
     public User findById(int id) {
         User user = entityManager.find(User.class, id);
         return user;

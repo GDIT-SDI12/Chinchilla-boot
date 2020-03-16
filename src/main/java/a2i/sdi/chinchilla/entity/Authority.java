@@ -12,7 +12,7 @@ public class Authority implements Serializable {
     private String username;
 
     @Id
-    @Column(name="authority")
+    @Column(name = "authority")
     private String authority;
 
     public Authority() {

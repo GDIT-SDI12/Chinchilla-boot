@@ -29,9 +29,6 @@ public class UserController {
         return "user-list";
     }
 
-//    @PostMapping("")
-//    public
-
     @GetMapping("/session")
     public String test(Model model, HttpServletRequest request) {
         request.getSession().setAttribute("mysesh", "mysesshvalue");
